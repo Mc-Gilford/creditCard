@@ -1,4 +1,4 @@
-package com.example.bankaccount.account;
+package com.example.bankaccount.entity.account;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,6 +1,6 @@
-package com.example.bankaccount.institution;
+package com.example.bankaccount.entity.institution;
 
-import com.example.bankaccount.location.Location;
+import com.example.bankaccount.entity.location.Location;
 import lombok.Data;
 import java.util.ArrayList;
 import java.util.UUID;
