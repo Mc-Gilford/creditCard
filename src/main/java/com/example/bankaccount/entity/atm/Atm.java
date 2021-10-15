@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Data
 public class Atm  {
-    private UUID id;
+    private String id;
     private String type;
 
 }
