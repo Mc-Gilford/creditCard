@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "4374a9e3-0c56-4b27-85a5-9100aeb6cdf6",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/user/testUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"id\":\"0101\",\n    \"name\":\"JOSE\",\n    \"lastname\":\"Rodriguez\",\n    \"age\":22,\n    \"creditCards\":null,\n    \"salary\":23,\n    \"preferences\": [\"oj\",\"ok\"]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/testUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"testUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/json",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"url\":\"https://raw.githubusercontent.com/McGilfordJose/creditCard/main/ejemplo.json\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/location",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"url\":\"https://raw.githubusercontent.com/McGilfordJose/creditCard/main/location.json\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/location?state=CDMX&cp=55850&gps=0,0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "CDMX"
+						},
+						{
+							"key": "cp",
+							"value": "55850"
+						},
+						{
+							"key": "gps",
+							"value": "0,0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
