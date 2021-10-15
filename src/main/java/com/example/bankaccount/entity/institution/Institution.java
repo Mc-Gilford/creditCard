@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Data
 public class Institution  {
-    private UUID id;
+    private Integer id;
     private String name;
     private ArrayList<Location> locations;
 

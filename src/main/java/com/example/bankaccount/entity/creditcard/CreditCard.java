@@ -11,7 +11,7 @@ import java.util.UUID;
 @Data
 public class CreditCard {
     @Id
-    private UUID id;
+    private Integer id;
     private Account account;
     private String type;
     private String institution;
