@@ -1,7 +1,6 @@
 package com.example.bankaccount.controllers;
 
 import com.example.bankaccount.entity.user.User;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping(value = "user")
-@Controller
+
 public class UserController {
 
     @GetMapping
@@ -17,7 +16,7 @@ public class UserController {
                                 @RequestParam(value="salary") Double salary,
                                 @RequestParam(value="preferences")List<String> preferences){
         //http://localhost:8080/user?id=1&age=22&salary=2&preferences=1,2
-        return new User(10L, name, age,salary,preferences);
+        return new User(UUID.randomUUID().toString(), name, age,salary,preferences);
     }
 
     @RequestMapping(value = "/testUser", method = RequestMethod.POST)
