@@ -1,9 +1,13 @@
 package com.example.bankaccount.controllers;
 
 import com.example.bankaccount.dao.DaoUser;
+import com.example.bankaccount.dao.userService;
+import com.example.bankaccount.entity.JsonGetter;
 import com.example.bankaccount.entity.user.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,22 +18,40 @@ import java.util.UUID;
 @RequestMapping(value = "user")
 
 public class UserController {
-
-    @Autowired
+    //@Autowired Field repository in com.example.bankaccount.controllers.UserController required a bean of type 'com.example.bankaccount.dao.DaoUser' that could not be found.
+    //
+    //The injection point has the following annotations:
+    //	- @org.springframework.beans.factory.annotation.Autowired(required=true)
     private DaoUser repository;
     @GetMapping
     public User userInformation(@RequestParam(value="id") String name, @RequestParam(value="age") Integer age,
                                 @RequestParam(value="salary") Double salary,
-
                                 @RequestParam(value="preferences")List<String> preferences){
-        //http://localhost:8080/user?id=1&age=22&salary=2&preferences=1,2
+        JsonGetter getterJson = new JsonGetter();
+        getterJson.setUrl("");
+        userService service = new userService();
         return new User(UUID.randomUUID().toString(), name, age,salary,preferences);
     }
 
     @PostMapping
     public User userCreate(@Validated @RequestBody User user){
         log.info(user.toString());
-        return repository.insert(user);
+        user.setId(UUID.randomUUID().toString());
+        return user;
+        //return Mongo repository.insert(user) hacia el insert;
+    }
+
+    @PutMapping
+    public User userUpdate(@Validated @RequestBody User user){
+        log.info(user.toString());
+        return repository.save(user);
+    }
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> userDelete(@PathVariable String id){
+        repository.deleteById(id);
+        return null; //new ResponseEntity<>(
+                //"Elemento eliminado :"+id ,
+                //HttpStatus.OK);
     }
 
     @GetMapping

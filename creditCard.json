@@ -1,0 +1,62 @@
+[
+    {
+        "id":1,
+        "account":
+        {
+            "id": 1,
+            "accountNumber":"0123040445",
+            "type":"STUDENT",
+            "amount":123300
+        },
+        "type":"DIGITAL",
+        "institution":"Citi"
+    },
+    {
+        "id":2,
+        "account":
+        {
+            "id": 2,
+            "accountNumber":"3123040445",
+            "type":"SCHOLARSHIP",
+            "amount":12312
+        },
+        "type":"DIGITAL",
+        "institution":"BBVA"
+    },
+    {
+        "id":3,
+        "account":
+        {
+            "id": 3,
+            "accountNumber":"3123040445",
+            "type":"PERSONAL",
+            "amount":1231
+        },
+        "type":"DIGITAL",
+        "institution":"SANTANDER"
+    },
+    {
+        "id":4,
+        "account":
+        {
+            "id": 4,
+            "accountNumber":"3263040445",
+            "type":"PERSONAL",
+            "amount":1231
+        },
+        "type":"ZERO",
+        "institution":"HSBC"
+    },
+    {
+        "id":5,
+        "account":
+        {
+            "id": 5,
+            "accountNumber":"3138040445",
+            "type":"PERSONAL",
+            "amount":200
+        },
+        "type":"DIGITAL",
+        "institution":"SANTANDER"
+    }
+]

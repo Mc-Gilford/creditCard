@@ -1,0 +1,26 @@
+[
+    {
+        "id":"Paz",
+        "type":"Automatico"
+    },
+    {
+        "id":"Paz",
+        "type":"Automatico"
+    },
+    {
+        "id":"Tornado",
+        "type":"Automatico"
+    },
+    {
+        "id":"Xalapa",
+        "type":"Automatico"
+    },
+    {
+        "id":"Toreo",
+        "type":"Automatico"
+    },
+    {
+        "id":"Lindavista",
+        "type":"Efectivo"
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {    
+    "id":2,
+    "name": "Juan",
+    "lastname":"Lopez",
+    "age":27,
+    "creditCards":[{
+        "id":1,
+        "account":
+        {
+            "id": 1,
+            "accountNumber":"0123040445",
+            "type":"PERSONAL",
+            "amount":123300
+        },
+        "type":"DIGITAL",
+        "institution":"Citi"
+        }
+    ],
+    "salary": 12300,
+    "preferences":["Viajes","Cociertos"]
+    },
+    {    
+        "id":1,
+        "name": "Felipe",
+        "lastname":"Gomez",
+        "age":48,
+        "creditCards":[{
+            "id":2,
+            "account":
+            {
+                "id": 2,
+                "accountNumber":"3123040445",
+                "type":"PERSONAL",
+                "amount":12312
+            },
+            "type":"DIGITAL",
+            "institution":"BBVA"
+            }
+        ],
+        "salary": 12300,
+        "preferences":["Cociertos"]
+    },
+    {    
+        "id":3,
+        "name": "Naruto",
+        "lastname":"Gomez",
+        "age":18,
+        "creditCards":[{
+            "id":3,
+            "account":
+            {
+                "id": 3,
+                "accountNumber":"3123040445",
+                "type":"PERSONAL",
+                "amount":1231
+            },
+            "type":"DIGITAL",
+            "institution":"SANTANDER"
+            }
+        ],
+        "salary": 100,
+        "preferences":[]
+    }
+]
