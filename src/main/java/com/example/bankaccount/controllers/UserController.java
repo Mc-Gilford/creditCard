@@ -25,6 +25,7 @@ public class UserController {
     //
     //The injection point has the following annotations:
     //	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+    private final static String URL_JSON_DATA= "https://raw.githubusercontent.com/McGilfordJose/creditCard/main/users.json";
     private DaoUser repository;
     @GetMapping
     public User userInformation(@RequestParam(value="id") String ID) throws IOException {
