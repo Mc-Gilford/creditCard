@@ -58,5 +58,29 @@
         },
         "type":"DIGITAL",
         "institution":"SANTANDER"
+    },
+    {
+        "id":6,
+        "account":
+        {
+            "id": 6,
+            "accountNumber":"3138940445",
+            "type":"VIAJES",
+            "amount":2000
+        },
+        "type":"DIGITAL",
+        "institution":"SANTANDER"
+    },
+    {
+        "id":7,
+        "account":
+        {
+            "id": 7,
+            "accountNumber":"3138940465",
+            "type":"CONCIERTOS",
+            "amount":1000
+        },
+        "type":"DIGITAL",
+        "institution":"BBVA"
     }
 ]

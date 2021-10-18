@@ -3,14 +3,17 @@ package com.example.bankaccount.controllers;
 import com.example.bankaccount.dao.DaoUser;
 import com.example.bankaccount.dao.userService;
 import com.example.bankaccount.entity.JsonGetter;
+import com.example.bankaccount.entity.creditcard.CreditCard;
 import com.example.bankaccount.entity.user.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 @Slf4j
@@ -24,13 +27,20 @@ public class UserController {
     //	- @org.springframework.beans.factory.annotation.Autowired(required=true)
     private DaoUser repository;
     @GetMapping
-    public User userInformation(@RequestParam(value="id") String name, @RequestParam(value="age") Integer age,
-                                @RequestParam(value="salary") Double salary,
-                                @RequestParam(value="preferences")List<String> preferences){
+    public User userInformation(@RequestParam(value="id") String ID) throws IOException {
         JsonGetter getterJson = new JsonGetter();
-        getterJson.setUrl("");
-        userService service = new userService();
-        return new User(UUID.randomUUID().toString(), name, age,salary,preferences);
+        getterJson.setUrl("https://raw.githubusercontent.com/McGilfordJose/creditCard/main/users.json");
+        return new userService().getUser(ID,getterJson);
+    }
+
+    @GetMapping(value = "creditCard", produces= MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public String userAssignCreditCard(@RequestParam(value="age") Integer age,
+                                                 @RequestParam(value="salary") Double salary,
+                                                 @RequestParam(value="preferences")List<String> preferences) throws IOException {
+        JsonGetter getterJson = new JsonGetter();
+        getterJson.setUrl("https://raw.githubusercontent.com/McGilfordJose/creditCard/main/creditCard.json");
+        return new userService().getCardsByUser(age,salary,preferences,getterJson);
     }
 
     @PostMapping
