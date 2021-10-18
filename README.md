@@ -44,4 +44,4 @@ http://localhost:8080/creditCard/
 ![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-7.png)
 ![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-8.png)
 ![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-9.png)
-![alt tag]("https://github.com/McGilfordJose/creditCard/blob/main/img/postman-10.png")
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-10.png)
