@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 //@EnableEurekaClient Este estaba dando muchos errores tuve que deshabilitarlo y quitar configuraciones
-//@EnableSwagger2
+@EnableSwagger2
 public class BankAccountApplication implements CommandLineRunner {
 	@Autowired
 	private JdbcTemplate template;
