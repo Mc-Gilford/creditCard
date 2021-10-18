@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "4374a9e3-0c56-4b27-85a5-9100aeb6cdf6",
+		"_postman_id": "12ae9294-51bf-4b19-9bd8-c628ed1d56e0",
 		"name": "Test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/user/testUser",
+			"name": "testUser",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -35,7 +35,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/json",
+			"name": "JsonGetterInformation",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -66,7 +66,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/location",
+			"name": "getLocationNearest",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -105,6 +105,190 @@
 							"key": "gps",
 							"value": "0,0"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"name\": \"Juan\",\r\n    \"lastname\":\"Lopez\",\r\n    \"age\":27,\r\n    \"creditCards\":[{\r\n        \"id\":1,\r\n        \"account\":\r\n        {\r\n            \"id\": 1,\r\n            \"accountNumber\":\"0123040445\",\r\n            \"type\":\"PERSONAL\",\r\n            \"amount\":123300\r\n        },\r\n        \"type\":\"DIGITAL\",\r\n        \"institution\":\"Citi\"\r\n        }\r\n    ],\r\n    \"salary\": 12300,\r\n    \"preferences\":[\"Viajes\",\"Cociertos\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assignatedCreditCard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/creditCard?age=22&salary=2200&preferences=VIAJES,CONCIERTOS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"creditCard"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "22"
+						},
+						{
+							"key": "salary",
+							"value": "2200"
+						},
+						{
+							"key": "preferences",
+							"value": "VIAJES,CONCIERTOS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCreditCards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/creditCard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creditCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditCardPathParam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/creditCard/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creditCard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCreditCard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\":8,\r\n        \"account\":\r\n        {\r\n            \"id\": 6,\r\n            \"accountNumber\":\"3138940445\",\r\n            \"type\":\"VIAJES\",\r\n            \"amount\":2000\r\n        },\r\n        \"type\":\"DIGITAL\",\r\n        \"institution\":\"SANTANDER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/creditCard/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creditCard",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCreditCardAccountNumberEncode",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\":8,\r\n        \"account\":\r\n        {\r\n            \"id\": 6,\r\n            \"accountNumber\":\"3138940445\",\r\n            \"type\":\"VIAJES\",\r\n            \"amount\":2000\r\n        },\r\n        \"type\":\"DIGITAL\",\r\n        \"institution\":\"SANTANDER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/creditCard/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creditCard",
+						""
 					]
 				}
 			},

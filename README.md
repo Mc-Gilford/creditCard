@@ -35,3 +35,13 @@ http://localhost:8080/creditCard/
 http://localhost:8080/creditCard/
 
 
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-1.png)
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-2.png)
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-3.png)
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-4.png)
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-5.png)
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-6.png)
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-7.png)
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-8.png)
+![alt tag](https://github.com/McGilfordJose/creditCard/blob/main/img/postman-9.png)
+![alt tag]("https://github.com/McGilfordJose/creditCard/blob/main/img/postman-10.png")
